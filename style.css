@@ -1,3 +1,4 @@
+html,
 body {
 	font-family: "Open Sans", sans-serif;
 	font-optical-sizing: auto;
@@ -6,10 +7,20 @@ body {
 	font-variation-settings: "wdth" 100;
 	background-color: #f9fafc;
 	margin: 0px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 a {
 	text-decoration: none;
 	color: #000;
+}
+main {
+	padding: 0px 15px;
+}
+header {
+	padding: 0px 15px;
 }
 header div {
 	margin: 1rem 0rem;
@@ -29,9 +40,6 @@ header div {
 	padding: 4px;
 	margin-bottom: 15px;
 }
-.container {
-	padding: 15px;
-}
 
 footer {
 	position: fixed;
@@ -42,12 +50,83 @@ footer {
 	background-color: rgba(247, 193, 162, 0.7);
 	width: 100%;
 }
-footer div {
-	flex: 1;
+header {
+	margin: 1rem 0rem;
+}
+main {
+	display: flex;
+	flex-direction: column;
+}
+aside {
+	display: none;
 }
 .footer_link {
 	margin: unset;
 	display: flex;
 	align-self: flex-end;
 	text-align: center;
+	gap: 15px;
+}
+.circle {
+	border-radius: 150px;
+	width: 150px;
+	height: 150px;
+	position: relative;
+}
+#circle1 {
+	background-color: rgba(247, 136, 167, 0.6);
+	z-index: 1;
+	transform: scale(2);
+	left: 130px;
+}
+#circle2 {
+	background-color: rgba(247, 193, 162, 0.7);
+	z-index: 3;
+	transform: scale(1.5);
+	bottom: -113px;
+	left: 113px;
+}
+#circle3 {
+	background-color: rgba(207, 130, 213, 0.6);
+	z-index: 2;
+	bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+	.nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.nav-list .cta {
+		width: 25%;
+	}
+	article {
+		flex-basis: 50%;
+	}
+	aside {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		flex-basis: 25%;
+	}
+	.logo {
+		flex-grow: 2;
+	}
+	.nav-list {
+		display: flex;
+		flex-direction: row;
+		flex-grow: 1;
+		justify-content: flex-end;
+		gap: 15px;
+		align-items: center;
+	}
+	main {
+		flex-direction: row;
+		gap: 30px;
+		justify-content: space-between;
+	}
+	header div {
+		margin: unset;
+	}
 }
